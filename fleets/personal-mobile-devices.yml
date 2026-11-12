@@ -87,6 +87,16 @@ software:
       post_install_script:
         path: ../platforms/windows/software/cloudflare-warp/post-install.ps1
 
+    # AI assistants, available in self-service on Mac and Windows.
+    - slug: claude/darwin # Claude for macOS
+      self_service: true
+    - slug: claude/windows # Claude for Windows
+      self_service: true
+    - slug: chatgpt/darwin # ChatGPT for macOS
+      self_service: true
+    - slug: chatgpt/windows # ChatGPT for Windows
+      self_service: true
+
   app_store_apps:
     ###########################################################
     # iOS apps
