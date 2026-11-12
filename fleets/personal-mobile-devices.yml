@@ -69,9 +69,24 @@ controls:
   #   minimum_version: "18.5"
 
 ###########################################################
-# Apps to make available from the Apple App Store or Google Play
+# Policies
+###########################################################
+policies:
+  # Installs Cloudflare WARP automatically on Windows hosts that don't have it.
+  - paths: ../platforms/windows/policies/personal-mobile-devices/*.yml
+
+###########################################################
+# Software: Apple App Store / Google Play apps, plus Windows apps
 ###########################################################
 software:
+  fleet_maintained_apps:
+    # Cloudflare WARP for Windows: installed automatically by the policy above,
+    # not offered in self-service. Configured right after install by our script.
+    - slug: cloudflare-warp/windows
+      self_service: false
+      post_install_script:
+        path: ../platforms/windows/software/cloudflare-warp/post-install.ps1
+
   app_store_apps:
     ###########################################################
     # iOS apps
