@@ -178,6 +178,12 @@ policies:
 software:
   fleet_maintained_apps:
     # macOS apps
+    - slug: zoom/darwin # Zoom for macOS
+      self_service: true
+      categories:
+        - "📹 Meetings & Calls"
+      post_install_script:
+        path: ../platforms/macos/software/zoom/post-install.sh
     # …
     # - slug: slack/darwin # Slack for macOS
     #   self_service: true
