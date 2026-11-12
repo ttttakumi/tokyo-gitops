@@ -1,0 +1,8 @@
+# Zoom for macOS, downloaded from Zoom's public "latest" URL.
+# ZoomInstallerIT.pkg is Zoom's installer for IT/managed deployment.
+- url: https://zoom.us/client/latest/ZoomInstallerIT.pkg
+  self_service: true
+  categories:
+    - "📹 Meetings & Calls"
+  post_install_script:
+    path: post-install.sh
