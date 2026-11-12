@@ -1,0 +1,8 @@
+- name: Windows - Cloudflare WARP installed
+  query: SELECT 1 FROM programs WHERE name = 'Cloudflare WARP';
+  critical: false
+  description: Cloudflare WARP isn't installed on this computer.
+  resolution: Fleet installs Cloudflare WARP automatically. If this keeps failing, contact IT.
+  platform: windows
+  install_software:
+    fleet_maintained_app_slug: cloudflare-warp/windows
