@@ -41,7 +41,7 @@ org_settings:
   #   • https://fleetdm.com/docs/configuration/yaml-files#fleet-desktop
   ###########################################################
   fleet_desktop:
-    transparency_url: https://jmug.jp
+    transparency_url: https://pointerpointer.com
 
   ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
