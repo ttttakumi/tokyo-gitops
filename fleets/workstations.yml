@@ -69,6 +69,10 @@ controls:
     configuration_profiles:
       - paths: ../platforms/macos/declaration-profiles/*.json
       - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
+      # Engineering-only profiles live in a subfolder so the glob above doesn't apply them to everyone.
+      - path: ../platforms/macos/configuration-profiles/engineering/Disable Bluetooth Sharing.mobileconfig
+        labels_include_any:
+          - Engineering department
   windows_settings:
     configuration_profiles:
       - paths: ../platforms/windows/configuration-profiles/*.xml
