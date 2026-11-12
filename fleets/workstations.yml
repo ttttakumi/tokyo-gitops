@@ -178,6 +178,8 @@ policies:
 software:
   fleet_maintained_apps:
     # macOS apps
+    - slug: 1password/darwin # 1Password for macOS
+      self_service: true
     # …
     # - slug: slack/darwin # Slack for macOS
     #   self_service: true
