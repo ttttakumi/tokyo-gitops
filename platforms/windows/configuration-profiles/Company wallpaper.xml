@@ -1,0 +1,11 @@
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Personalization/DesktopImageUrl</LocURI>
+    </Target>
+    <Data></Data>
+  </Item>
+</Replace>
