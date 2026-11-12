@@ -1,0 +1,7 @@
+- name: Linux - DNS uses Cloudflare (1.1.1.1)
+  query: SELECT 1 WHERE EXISTS (SELECT 1 FROM dns_resolvers WHERE type = 'nameserver' AND address = '1.1.1.1') AND NOT EXISTS (SELECT 1 FROM dns_resolvers WHERE type = 'nameserver' AND address NOT IN ('1.1.1.1', '1.0.0.1', '2606:4700:4700::1111', '2606:4700:4700::1001'));
+  critical: true
+  description: This computer's DNS isn't set to Cloudflare (1.1.1.1). Using other DNS servers can bypass company DNS filtering and expose browsing to untrusted resolvers.
+  resolution: |
+    Set your network connection's DNS servers to 1.1.1.1 and 1.0.0.1 (remove any others), for example in Settings > Network or with your distribution's network manager. Contact IT if you can't change it.
+  platform: linux
