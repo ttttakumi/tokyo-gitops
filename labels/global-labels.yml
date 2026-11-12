@@ -8,3 +8,6 @@
   description: Hosts that haven't restarted in more than 30 days
   query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
   label_membership_type: dynamic
+- name: macOS 27 beta testers
+  description: Hosts enrolled in the macOS 27 beta testing program
+  label_membership_type: manual
