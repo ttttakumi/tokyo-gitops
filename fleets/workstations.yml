@@ -73,6 +73,10 @@ controls:
       - path: ../platforms/macos/configuration-profiles/engineering/Disable Bluetooth Sharing.mobileconfig
         labels_include_any:
           - Engineering department
+      # Beta testers get new major macOS releases right away; everyone else waits.
+      - path: ../platforms/macos/configuration-profiles/scoped/Defer major macOS updates.mobileconfig
+        labels_exclude_any:
+          - macOS 27 beta testers
   windows_settings:
     configuration_profiles:
       - paths: ../platforms/windows/configuration-profiles/*.xml
