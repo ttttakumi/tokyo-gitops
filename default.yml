@@ -34,6 +34,16 @@ org_settings:
     server_url: $FLEET_URL
 
   ###########################################################
+  # The "About Fleet" / transparency link end users see when
+  # they open Fleet Desktop. (Fleet Premium)
+  #
+  # Read more:
+  #   • https://fleetdm.com/docs/configuration/yaml-files#fleet-desktop
+  ###########################################################
+  fleet_desktop:
+    transparency_url: https://jmug.jp
+
+  ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
   #
   # Read more:
