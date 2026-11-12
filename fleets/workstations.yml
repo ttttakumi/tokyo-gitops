@@ -66,6 +66,8 @@ controls:
   # ```  
   ###########################################################
   apple_settings:
+    enable_disk_encryption: true # FileVault; Fleet escrows the recovery key
+    enable_escrow_disk_encryption_key: true
     configuration_profiles:
       - paths: ../platforms/macos/declaration-profiles/*.json
       - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
@@ -78,8 +80,11 @@ controls:
         labels_exclude_any:
           - macOS 27 beta testers
   windows_settings:
+    enable_disk_encryption: true # BitLocker; Fleet escrows the recovery key
     configuration_profiles:
       - paths: ../platforms/windows/configuration-profiles/*.xml
+  linux_settings:
+    enable_escrow_disk_encryption_key: true # Fleet Desktop asks users to escrow their LUKS key
 
   ###########################################################
   # Managed disk encryption
@@ -89,8 +94,12 @@ controls:
   #
   # Read more here:
   #   • https://fleetdm.com/guides/enforce-disk-encryption
+  # Disk encryption is enabled per platform above (apple_settings,
+  # windows_settings, linux_settings).
   ###########################################################
-  # enable_disk_encryption: true
+
+  # Require a password to boot into recoveryOS on eligible Macs.
+  enable_recovery_lock_password: true
 
   ###########################################################
   # Managed OS updates
