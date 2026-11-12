@@ -80,7 +80,6 @@ controls:
         labels_exclude_any:
           - macOS 27 beta testers
   windows_settings:
-    enable_disk_encryption: true # BitLocker; Fleet escrows the recovery key
     configuration_profiles:
       - paths: ../platforms/windows/configuration-profiles/*.xml
   linux_settings:
